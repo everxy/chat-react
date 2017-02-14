@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import NavbarStore from '../store/NavbarStore'
+import NavbarStore from '../stores/NavbarStore'
 import NavbarActions from '../actions/NavbarActions'
 
 
@@ -99,6 +99,46 @@ class Navbar extends React.Component {
 						<li><Link to='/'>HOME</Link></li>
 						<li><Link to='/stats'>STATS</Link></li>
 						<li className='dropdown'>
+			              <a href='#' className='dropdown-toggle' data-toggle='dropdown'>Top 100 <span className='caret'></span></a>
+			              <ul className='dropdown-menu'>
+			                <li><Link to='/top'>Top Overall</Link></li>
+			                <li className='dropdown-submenu'>
+			                  <Link to='/top/caldari'>Caldari</Link>
+			                  <ul className='dropdown-menu'>
+			                    <li><Link to='/top/caldari/achura'>Achura</Link></li>
+			                    <li><Link to='/top/caldari/civire'>Civire</Link></li>
+			                    <li><Link to='/top/caldari/deteis'>Deteis</Link></li>
+			                  </ul>
+			                </li>
+			                <li className='dropdown-submenu'>
+			                  <Link to='/top/gallente'>Gallente</Link>
+			                  <ul className='dropdown-menu'>
+			                    <li><Link to='/top/gallente/gallente'>Gallente</Link></li>
+			                    <li><Link to='/top/gallente/intaki'>Intaki</Link></li>
+			                    <li><Link to='/top/gallente/jin-mei'>Jin-Mei</Link></li>
+			                  </ul>
+			                </li>
+			                <li className='dropdown-submenu'>
+			                  <Link to='/top/minmatar'>Minmatar</Link>
+			                  <ul className='dropdown-menu'>
+			                    <li><Link to='/top/minmatar/brutor'>Brutor</Link></li>
+			                    <li><Link to='/top/minmatar/sebiestor'>Sebiestor</Link></li>
+			                    <li><Link to='/top/minmatar/vherokior'>Vherokior</Link></li>
+			                  </ul>
+			                </li>
+			                <li className='dropdown-submenu'>
+			                  <Link to='/top/amarr'>Amarr</Link>
+			                  <ul className='dropdown-menu'>
+			                    <li><Link to='/top/amarr/amarr'>Amarr</Link></li>
+			                    <li><Link to='/top/amarr/ni-kunni'>Ni-Kunni</Link></li>
+			                    <li><Link to='/top/amarr/khanid'>Khanid</Link></li>
+			                  </ul>
+			                </li>
+			                <li className='divider'></li>
+			                <li><Link to='/shame'>Hall of Shame</Link></li>
+			              </ul>
+			            </li>
+						<li className='dropdown'>
 							<a href='#' className='dropdown-toggle' data-toggle='dropdown'>Female <span className='caret'></span></a>
 			             	<ul className='dropdown-menu'>
 			                <li><Link to='/female'>All</Link></li>
@@ -188,3 +228,4 @@ class Navbar extends React.Component {
 
 
 
+export default Navbar

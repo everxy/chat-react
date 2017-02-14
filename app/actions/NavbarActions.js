@@ -38,3 +38,6 @@ class NavbarActions {
 		  })
 	}
 }
+
+
+export default alt.createActions(NavbarActions)

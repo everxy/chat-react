@@ -33,10 +33,10 @@ var dependencies = [
 
 gulp.task('vendor', function() {
     return gulp.src([
-            'bower_components/juqery/dist/jquery.js',
+            'bower_components/jquery/dist/jquery.js',
             'bower_components/bootstrap/dist/js/bootstrap.js',
             'bower_components/magnific-popup/dist/jquery.magnific-popup.js', //响应式的lightbox和模态框脚本
-            'bower_components/toaster/toaster.js' //可以对通知提示进行自定义的插件
+            'bower_components/toastr/toastr.js' //可以对通知提示进行自定义的插件
         ]).pipe(concat('vendor.js'))
         .pipe(gulpif(production, uglify({
             mangle: false
