@@ -68,3 +68,11 @@ io.sockets.on('connection',function(socket){
 server.listen(app.get('port'),function(){
 	console.log('Express server listening on port:' + app.get('port'))
 })
+
+var mongoose = require('mongoose'),
+	config = require('./config');
+var Character = require('./models/character')
+mongoose.connect(config.database)
+mongoose.connection.on('error',function(){
+	console.info('Error: Could not connect to MongoDB. Did you forget to run `mongod`?')
+})
